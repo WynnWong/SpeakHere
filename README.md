@@ -41,3 +41,14 @@ SpeakHere给出了关于AudioQueue Services, Audio File Services, 以及 AudioSe
 * Use Audio Session Services to set appropriate audio session categories for recording and playback.
 * Use Audio Session Services to pause playback upon receiving an interruption, and to then resume playback if the interruption ends.
 * Use UIBarButtonItem objects as toggle buttons.
+
+### 注意iOS默认支持的audio Formats
+
+* linear PCM
+* ALAC (Apple Lossless)
+* IMA4 (IMA/ADPCM)
+* iLBC
+* µLaw
+* aLaw
+
+因此如果需要保存成其他的音频格式,需要自己使用LPCM,然后封装成其他的音频格式,例如使用Speex压缩,Ogg封装,进行语音传递.
